@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" version="4.0">
+
+
+
+ <servlet>
+  	<servlet-name>action</servlet-name><!--1 -->
+  	<servlet-class>servlet.DispatcherServlet</servlet-class><!-- 패키지 이름넣는곳 -->
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>action</servlet-name><!--1이랑 이름 같아야함 -->
+  	<url-pattern>*.do</url-pattern><!--요청명 url주소 -->
+  </servlet-mapping>
+
+</web-app>

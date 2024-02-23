@@ -15,7 +15,7 @@
     BoardDao dao = BoardDao.getInstance();
     Board board = dao.selectOne(num, true);
 
-    String writer  = board.getWriter();
+    int memberno  = board.getMemberno();
     String title   = board.getTitle();
     String content = board.getContent();
     String regtime = board.getRegtime();
@@ -69,8 +69,8 @@ th, td {
             <td><%=title%></td>
         </tr>
         <tr>
-            <th>작성자</th>
-            <td><%=writer%></td>
+            <th>작성자번호</th>
+            <td><%=memberno%></td>
         </tr>
         <tr>
             <th>작성일시</th>

@@ -1,3 +1,4 @@
+<%@page import="dto.Member"%>
 <%@page import="dto.Board"%>
 <%@page import="dao.BoardDao"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -11,7 +12,9 @@
     int num = (tmp != null && tmp.length() > 0) ? Integer.parseInt(tmp) : 0;
 
     // 새 글쓰기 모드를 가정하고 변수 초기값 설정
-    String writer = "";
+                
+
+	Member member = (Member) session.getAttribute("member");
     String title = "";
     String content = "";
     String action = "insert.jsp";
@@ -22,7 +25,6 @@
         Board board = dao.selectOne(num, false);
 
         // 글 데이터를 변수에 저장
-        writer = board.getWriter();
         title = board.getTitle();
         content = board.getContent();
 
@@ -94,8 +96,8 @@
                 <td><input type="text" name="title" maxlength="80" value="<%=title%>"></td>
             </tr>
             <tr>
-                <th>작성자</th>
-                <td><input type="text" name="writer" maxlength="20" value="<%=writer%>"></td>
+                <th>회원번호</th>
+                <td><input type="text" readonly name="memberno" maxlength="20" value="<%=member.getMemberno()%>"> </td>
             </tr>
             <tr>
                 <th>내용</th>

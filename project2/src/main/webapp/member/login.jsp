@@ -13,7 +13,9 @@
         if (member != null) {
             session.setAttribute("userId",   member.getId());
             session.setAttribute("userName", member.getName());
-                
+            session.setAttribute("userNo",  member.getMemberno());
+            
+            session.setAttribute("member", member);
             response.sendRedirect("../index.jsp");   
             return;
         }

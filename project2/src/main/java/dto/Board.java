@@ -29,25 +29,26 @@ public class Board {
 
 	public Board() {}
 	
-	public Board(String writer, String title, String content) {
-		this(0, writer, title, content, "", 0);
+	public Board(int memberno, String title, String content) {
+		this(0, memberno, title, content, "", 0);
 //		this.writer = writer;
 //		this.title = title;
 //		this.content = content;
 	}
 
-	public Board(int num, String writer, String title, String content) {
-		this(num, writer, title, content, "", 0);
+	public Board(int num, int memberno, String title, String content) {
+		this(num, memberno, title, content, "", 0);
 	}
 	
-	public Board(int num, String writer, String title, String content, String regtime, int hits) {
+	public Board(int num, int memberno, String title, String content, String regtime, int hits) {
 		this.num = num;
-		this.writer = writer;
+		this.memberno = memberno;
 		this.title = title;
 		this.content = content;
 		this.regtime = regtime;
 		this.hits = hits;
 	}
+
 
 	public int getNum() {
 		return num;

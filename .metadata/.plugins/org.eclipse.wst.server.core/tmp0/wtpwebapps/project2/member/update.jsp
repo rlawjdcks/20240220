@@ -11,12 +11,12 @@
  
      // 전달받은 값 읽기
      int    num     = Integer.parseInt(request.getParameter("num"));
-     String writer  = request.getParameter("writer" );
+     int memberno  = Integer.parseInt(request.getParameter("memberno" ));
      String title   = request.getParameter("title"  );
      String content = request.getParameter("content");
  
      // 빈 칸이 하나라도 있으면 오류 출력하고 종료
-     if (writer  == null || writer.length()  == 0 ||
+     if (
          title   == null || title.length()   == 0 ||
          content == null || content.length() == 0) {
  %>      
@@ -29,7 +29,7 @@
      }
  
      BoardDao dao = BoardDao.getInstance();
-     Board board = new Board(num, writer, title, content);
+     Board board = new Board(num, memberno, title, content);
      dao.update(board);
      
      // 글 보기 화면으로 돌아감

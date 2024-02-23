@@ -37,9 +37,9 @@ public class BoardDao {
 			ResultSet rs = pstmt.executeQuery();
 			
 			while (rs.next()) {
-				Board board = new Board(rs.getInt("num"), rs.getString("writer"), 
+				Board board = new Board(rs.getInt("num"),  
 						rs.getString("title"), rs.getString("content"),
-						rs.getString("regtime"), rs.getInt("hits"));
+						rs.getString("regtime"), rs.getInt("hits"),rs.getInt("memberno"));
 				list.add(board);
 			}
 		} catch (SQLException e) {
@@ -58,9 +58,9 @@ public class BoardDao {
 			ResultSet rs = pstmt.executeQuery();
 			
 			while (rs.next()) {
-				Board board = new Board(rs.getInt("num"), rs.getString("writer"), 
+				Board board = new Board(rs.getInt("num"),  
 						rs.getString("title"), rs.getString("content"),
-						rs.getString("regtime"), rs.getInt("hits"));
+						rs.getString("regtime"), rs.getInt("hits"),rs.getInt("memberno"));
 				list.add(board);
 			}
 		} catch (SQLException e) {
@@ -81,10 +81,9 @@ public class BoardDao {
 			ResultSet rs = pstmt.executeQuery();
 			
 			if (rs.next()) {
-				board = new Board(rs.getInt("num"), rs.getString("writer"), 
+				board = new Board(rs.getInt("num"),  
 						rs.getString("title"), rs.getString("content"),
-						rs.getString("regtime"), rs.getInt("hits"));
-
+						rs.getString("regtime"), rs.getInt("hits"),rs.getInt("memberno"));
 			}
 			if (inc) {
 				pstmt.executeUpdate("update board set hits=hits+1 where num="+num);
@@ -112,7 +111,7 @@ public class BoardDao {
 	}
 	
 	public int insert(Board board) {
-		String sql = "insert into board(writer, title, content, regtime, hits) values (?,?,?,now(),0)";
+		String sql = "insert into board(num, memberno, title, content, regtime, hits) values (seq_board.nextval,?,?,?,SYSDATE,0)";
 	    try ( 
 	        PreparedStatement pstmt = conn.prepareStatement(sql);            
 	    ) {
@@ -121,7 +120,7 @@ public class BoardDao {
 //	                         LocalTime.now().toString().substring(0, 8);
 	        
 	        // 쿼리 실행
-	    	pstmt.setString(1, board.getWriter());
+	    	pstmt.setInt(1, board.getMemberno());
 	    	pstmt.setString(2, board.getTitle());
 	    	pstmt.setString(3, board.getContent());
 	        return pstmt.executeUpdate();
@@ -133,7 +132,7 @@ public class BoardDao {
 	}
 	
 	public int update(Board board) {
-        String sql = "update board set writer=?, title=?, content=?, regtime=now() where num=?";
+        String sql = "update board set memberno=?, title=?, content=?, regtime=SYSDATE where num=?";
 	    try ( 
 	        PreparedStatement pstmt = conn.prepareStatement(sql);            
 	    ) {
@@ -142,7 +141,7 @@ public class BoardDao {
 //	                         LocalTime.now().toString().substring(0, 8);
 	        
 	        // 쿼리 실행
-	    	pstmt.setString(1, board.getWriter());
+	    	pstmt.setInt(1, board.getMemberno());
 	    	pstmt.setString(2, board.getTitle());
 	    	pstmt.setString(3, board.getContent());
 	    	pstmt.setInt(4, board.getNum());

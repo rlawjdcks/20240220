@@ -10,6 +10,7 @@ Connection conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:
 String sql = "select * from member";
 PreparedStatement pstmt = conn.prepareStatement(sql);
 ResultSet rs = pstmt.executeQuery();
+
 %>
 <!doctype html>
 <html lang="en">

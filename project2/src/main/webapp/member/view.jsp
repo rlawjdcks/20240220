@@ -1,3 +1,4 @@
+<%@page import="dto.Member"%>
 <%@page import="dto.Board"%>
 <%@page import="dao.BoardDao"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -7,6 +8,7 @@
 
 <%
     int num = Integer.parseInt(request.getParameter("num")); 
+	Member member = (Member) session.getAttribute("member");
 
     String memberId = (String)session.getAttribute("userName");
     if (memberId == null) {
@@ -20,6 +22,7 @@
     String content = board.getContent();
     String regtime = board.getRegtime();
     int hits       = board.getHits();
+	int boardAuthorNo = board.getMemberno();
 
     title   = title.replace  (" ", "&nbsp;");
     content = content.replace(" ", "&nbsp;").replace("\n", "<br>");
@@ -88,8 +91,14 @@ th, td {
 
     <br>
     <input type="button" value="목록보기" onclick="location.href='list.jsp'">
+ <%        if (member != null && member.getMemberno() == boardAuthorNo) { %>
+    <!-- 수정 버튼 -->
     <input type="button" value="수정" onclick="location.href='write.jsp?num=<%=num%>'">
+    <!-- 삭제 버튼 -->
     <input type="button" value="삭제" onclick="location.href='delete.jsp?num=<%=num%>'">
+<%
+    }
+%>
 </div>
 
 <!-- 부트스트랩 스크립트 추가 -->

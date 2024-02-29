@@ -160,7 +160,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="D:\_dev\jsp\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="D:\_dev\jsp\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\project3" path="/project3" reloadable="true" source="org.eclipse.jst.jee.server:project3"/><Context docBase="D:\_dev\jsp\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\project2" path="/project2" reloadable="true" source="org.eclipse.jst.jee.server:project2"/><Context docBase="D:\_dev\jsp\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\Project2_1" path="/Project2_1" reloadable="true" source="org.eclipse.jst.jee.server:Project2_1"/><Context docBase="D:\_dev\jsp\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\pro2" path="/pro2" reloadable="true" source="org.eclipse.jst.jee.server:pro2"/></Host>
+      <Context docBase="D:\_dev\jsp\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="D:\_dev\jsp\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\_web0228" path="/_web0228" reloadable="true" source="org.eclipse.jst.jee.server:_web0228"/></Host>
     </Engine>
   </Service>
 </Server>

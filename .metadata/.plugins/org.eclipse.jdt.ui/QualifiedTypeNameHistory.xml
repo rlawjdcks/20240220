@@ -6,4 +6,8 @@
     <fullyQualifiedTypeName name="java.io.InputStreamReader"/>
     <fullyQualifiedTypeName name="java.io.BufferedReader"/>
     <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
+    <fullyQualifiedTypeName name="mvjsp.board.model.Member"/>
+    <fullyQualifiedTypeName name="org.apache.catalina.LifecycleState"/>
 </qualifiedTypeNameHistroy>

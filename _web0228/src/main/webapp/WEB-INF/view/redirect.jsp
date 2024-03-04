@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
     <%
-    	response.sendRedirect("list.do")
+    	response.sendRedirect("list.do");
     %>
 <!DOCTYPE html>
 <html>

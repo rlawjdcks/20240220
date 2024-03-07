@@ -25,8 +25,19 @@
     <fullyQualifiedTypeName name="java.time.LocalDateTime"/>
     <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="java.lang.RuntimeException"/>
-    <fullyQualifiedTypeName name="lombok.AllArgsConstructor"/>
     <fullyQualifiedTypeName name="lombok.Getter"/>
-    <fullyQualifiedTypeName name="lombok.Setter"/>
     <fullyQualifiedTypeName name="lombok.ToString"/>
+    <fullyQualifiedTypeName name="java.util.Collection"/>
+    <fullyQualifiedTypeName name="spring.MemberListPrinter"/>
+    <fullyQualifiedTypeName name="spring.MemberDao"/>
+    <fullyQualifiedTypeName name="spring.MemberPrinter"/>
+    <fullyQualifiedTypeName name="spring.MemberInfoPrinter"/>
+    <fullyQualifiedTypeName name="lombok.Setter"/>
+    <fullyQualifiedTypeName name="spring.VersionPrinter"/>
+    <fullyQualifiedTypeName name="com.board.MemberDao"/>
+    <fullyQualifiedTypeName name="lombok.AllArgsConstructor"/>
+    <fullyQualifiedTypeName name="com.board.BoardService"/>
+    <fullyQualifiedTypeName name="org.springframework.context.annotation.Bean"/>
+    <fullyQualifiedTypeName name="org.eclipse.jdt.internal.compiler.classfmt.NonNullDefaultAwareTypeAnnotationWalker"/>
+    <fullyQualifiedTypeName name="com.board.BoardDao"/>
 </qualifiedTypeNameHistroy>

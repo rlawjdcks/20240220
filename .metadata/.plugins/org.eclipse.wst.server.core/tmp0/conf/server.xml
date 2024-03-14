@@ -165,7 +165,7 @@
       
       <Context docBase="D:\_dev\jsp\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="D:\_dev\jsp\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\_sp0312" path="/_sp0312" reloadable="true" source="org.eclipse.jst.jee.server:_sp0312"/>
       
-      </Host>
+      <Context docBase="D:\_dev\jsp\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\_sp0314" path="/_sp0314" reloadable="true" source="org.eclipse.jst.jee.server:_sp0314"/></Host>
     </Engine>
   </Service>
 </Server>
